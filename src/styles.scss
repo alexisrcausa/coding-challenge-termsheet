@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn {
+  transition: all .3s;
+  height: 40px;
+  padding: 0 15px;
+  cursor: pointer;
+  color: white;
+  border: 0;
+  border-radius: 2px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  background-color: #1890ff;
+  border-color: #1890ff;
+
+  &.btn-delete {
+    background-color: #C62828;
+    border-color: #C62828;
+  }
+
+  &.btn-success {
+    background-color: #43A047;
+    border-color: #43A047;
+  }
+
+  &.btn-warning {
+    background-color: #FB8C00;
+    border-color: #FB8C00;
+  }
+
+  &.btn-ghost {
+    border: 1px solid  #1890ff;
+    background-color: transparent;
+    color: #1890ff;
+  }
+
+  &:hover {
+    filter: brightness(1.2);
+  }
+}

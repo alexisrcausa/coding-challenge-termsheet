@@ -1,0 +1,27 @@
+<div class="form-container">
+  <div>
+    <h1>New Deal</h1>
+    <form [formGroup]="dealForm" (ngSubmit)="addDeal()">
+
+      <label for="name">Name</label>
+      <input id="name" type="text" formControlName="name" />
+
+      <label for="address">Address</label>
+      <textarea id="address" rows="4" formControlName="address"></textarea>
+
+      <label for="purchasePrice">Purchase Price</label>
+      <input id="purchasePrice" type="number" formControlName="purchasePrice">
+
+      <label for="noi">NOI <i>(Net Operating Income)</i></label>
+      <input id="noi" type="number" formControlName="NOI">
+
+      <label for="capRate">Cap Rate</label>
+      <input [disabled]="true" id="capRate" formControlName="capRate">
+
+      <div class="btn-container">
+        <button routerLink="/deals" class="btn btn-ghost">Cancel</button>
+        <button [disabled]="!dealForm.valid" class="btn" type="submit">Add</button>
+      </div>
+    </form>
+  </div>
+</div>

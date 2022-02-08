@@ -1,0 +1,26 @@
+<div class="header">
+  <h1>Deals</h1>
+  <button routerLink="/newDeal" class="btn">Add Deal</button>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Price ($)</th>
+      <th>NOI ($)</th>
+      <th>Cap Rate (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let deal of deals" >
+      <td>{{ deal.id }}</td>
+      <td>{{ deal.name }}</td>
+      <td>{{ deal.address }}</td>
+      <td>{{ deal.purchasePrice | currency }}</td>
+      <td>{{ deal.NOI | currency }}</td>
+      <td>{{ deal.capRate }}%</td>
+    </tr>
+  </tbody>
+</table>

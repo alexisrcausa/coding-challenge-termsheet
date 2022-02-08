@@ -1,0 +1,45 @@
+table {
+  transition: all .3s;
+  width: 100%;
+  border-radius: 2px 2px 0 0;
+  border-collapse: separate;
+  border-spacing: 0;
+
+  td, th {
+    padding: 10px;
+  }
+
+  tr {
+    transition: background .3s;
+
+    &:hover {
+      background: #fafafa;
+    }
+
+    td {
+      border-bottom: 1px solid #f0f0f0;
+      text-align: center;
+
+      .btn {
+        height: 30px;
+
+        &.btn-warning {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  th {
+    border-bottom: 1px solid #f0f0f0;
+    background: #fafafa;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: inherit;
+  margin-bottom: 10px;
+}
